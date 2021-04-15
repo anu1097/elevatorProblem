@@ -1,15 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Elevator from './elevator/elevator'
-import { About } from './pages/About'
+import ElevatorContainer from './features/elevator/elevatorContainer'
 
 const App: React.FC = () => {
     return (
         <BrowserRouter>
-            <div>
+            <div className="flex flex-col items-center m-20">
                 <Switch>
-                    <Route path="/" component={Elevator} exact />
-                    <Route path="/about" component={About} />
+                    <Route path="/" component={ElevatorContainer} exact />
                 </Switch>
             </div>
         </BrowserRouter>
